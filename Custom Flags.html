@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>TheForgottenServer Custom Flags</title>
+	<script src="int.js"></script>
+	<script src="jscript.js"></script>
+</head>
+<body>
+	<form name="flags">
+	<table cellspacing="0" cellpadding="2" width="600" border="1">
+		<tr>
+			<td>Player flags</td>
+			<td>Account flags</td>
+		</tr>
+		<tr>
+			<td valign="top" width="300">
+				<input type="checkbox" name="groupflags" value="1" id="AllowIdle" onclick="calcFlags()" /> Can be idle without being kicked<br />
+				<input type="checkbox" name="groupflags" value="2" id="CanSeePosition" onclick="calcFlags()" /> Can see position onLook<br />
+				<input type="checkbox" name="groupflags" value="4" id="CanSeeItemDetails" onclick="calcFlags()" /> Can see item details onLook<br />
+				<input type="checkbox" name="groupflags" value="8" id="CanSeeCreatureDetails" onclick="calcFlags()" /> Can see creature details onLook<br />
+				<input type="checkbox" name="groupflags" value="16" id="NotSearchable" onclick="calcFlags()" /> Cannot be searched with exiva spell<br />
+				<input type="checkbox" name="groupflags" value="32" id="GamemasterPrivileges" onclick="calcFlags()" /> Gamemaster privileges*<br />
+				<input type="checkbox" name="groupflags" value="64" id="CanThrowAnywhere" onclick="calcFlags()" /> Can throw items anywhere<br />
+				<input type="checkbox" name="groupflags" value="128" id="CanPushAllItems" onclick="calcFlags()" /> Can push any item<br />
+				<input type="checkbox" name="groupflags" value="256" id="CanMoveAnywhere" onclick="calcFlags()" /> Can teleport to unstandable tiles<br />
+				<input type="checkbox" name="groupflags" value="512" id="CanMoveFromFar" onclick="calcFlags()" /> Can move things from far<br />
+				<input type="checkbox" name="groupflags" value="1024" id="CanUseFar" onclick="calcFlags()" /> Can use far<br />
+				<input type="checkbox" name="groupflags" value="8192" id="HideLevel" onclick="calcFlags()" /> Hide level in description<br />
+				<input type="checkbox" name="groupflags" value="16384" id="IsProtected" onclick="calcFlags()" /> Is protected<br />
+				<input type="checkbox" name="groupflags" value="32768" id="IsImmune" onclick="calcFlags()" /> Is immune to fields<br />
+				<input type="checkbox" name="groupflags" value="65536" id="NotGainSkull" onclick="calcFlags()" /> Doesn't gain skulls<br />
+				<input type="checkbox" name="groupflags" value="131072" id="NotGainUnjustified" onclick="calcFlags()" /> Doesn't gain unjustified kills<br />
+				<input type="checkbox" name="groupflags" value="262144" id="IgnorePacification" onclick="calcFlags()" /> Ignore pacification checks<br />
+				<input type="checkbox" name="groupflags" value="524288" id="IgnoreLoginDelay" onclick="calcFlags()" /> Ignore login delay<br />
+				<input type="checkbox" name="groupflags" value="1048576" id="CanStairhop" onclick="calcFlags()" /> Can stairhop<br />
+				<input type="checkbox" name="groupflags" value="2097152" id="CanTurnhop" onclick="calcFlags()" /> Can turnhop<br />
+				<input type="checkbox" name="groupflags" value="4194304" id="IgnoreHouseRent" onclick="calcFlags()" /> Ignore house rent<br />
+				<input type="checkbox" name="groupflags" value="8388608" id="CanWearAllAddons" onclick="calcFlags()" /> Can wear all addons of outfits<br />
+				<input type="checkbox" name="groupflags" value="16777216" id="IsWalkable" onclick="calcFlags()" /> Is walkable (walk stacking)<br />
+				<input type="checkbox" name="groupflags" value="33554432" id="CanUseAllMounts" onclick="calcFlags()" /> Can mount all mounts available<br />
+				<input type="checkbox" name="groupflags" value="67108864" id="HasFullLight" onclick="calcFlags()" /> Has full light by default<br />
+			</td>
+			<td valign="top" width="300">
+				<input type="checkbox" name="groupflags" value="2048" id="CanLoginMultipleCharacters" onclick="calcFlags()" /> Can login multiple characters at one time<br />
+				<input type="checkbox" name="groupflags" value="4096" id="CanLogoutAnytime" onclick="calcFlags()" /> Character can logout anytime and anywhere
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="text" id="result" name="result" />
+				<input type="button" value="Update" onclick="calcCheckboxes()" />
+			</td>
+	</table>
+	</form>
+</body>
+</html>
